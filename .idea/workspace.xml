@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/mnist_loader.py" line="20" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e3aed5-17ee-4dd9-87f9-83aca055ca38" name="Default Changelist" comment="" />
+    <list default="true" id="a7e3aed5-17ee-4dd9-87f9-83aca055ca38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/notes/vanilla-neural-net-notes.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vanilla_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            <state relative-caret-position="1173">
+              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
               <folding>
                 <element signature="e#310#331#0" expanded="true" />
               </folding>
@@ -76,7 +80,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/TheNetworkOfBrian" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,8 +95,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1022" />
-    <option name="y" value="31" />
+    <option name="x" value="416" />
+    <option name="y" value="53" />
     <option name="width" value="1331" />
     <option name="height" value="990" />
   </component>
@@ -112,7 +116,7 @@
             <path>
               <item name="TheNetworkOfBrian" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheNetworkOfBrian" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="notes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -122,12 +126,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maximilian\Documents\GitHub\TheNetworkOfBrian\notes" />
       <recent name="C:\Users\Maximilian\Documents\GitHub\TheNetworkOfBrian" />
       <recent name="C:\Users\Maximilian\Documents\GitHub\TheNetworkOfBrian\data" />
     </key>
@@ -202,16 +208,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559615744493</updated>
-      <workItem from="1559615759731" duration="26915000" />
+      <workItem from="1559615759731" duration="27454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26915000" />
+    <option name="totallyTimeSpent" value="27454000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1022" y="31" width="1331" height="990" extended-state="0" />
-    <editor active="true" />
+    <frame x="416" y="53" width="1331" height="990" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23446105" />
@@ -292,8 +297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vanilla_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        <state relative-caret-position="1173">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
           <folding>
             <element signature="e#310#331#0" expanded="true" />
           </folding>
