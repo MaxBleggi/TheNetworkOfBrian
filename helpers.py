@@ -1,5 +1,6 @@
 
 import numpy as mmath
+import json
 
 
 def sigmoid(z):
@@ -21,3 +22,18 @@ def quadratic_cost(output_activations, y):
     :return: Vector of paritial derivatives C_x
     """
     return output_activations - y
+
+
+def simulate_network(activation, biases, weights):
+    """
+    "Simulates" a network by taking the already trained biases and weights to calcualte output
+    by feeding it forward with sig(W * A + B)
+    :param activation: input for the network
+    :param biases: biases for a network
+    :param weights: weights for a network
+    :return: output from network
+    """
+    for b, w in zip(biases, weights):
+        activation = sigmoid(mmath.dot(w, activation) + b)
+    return activation
+

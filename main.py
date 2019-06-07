@@ -37,8 +37,21 @@ def main():
         test_data=test_load
     )
 
-    with open('docs/nnet_output', 'w') as file:
-        json.dump(data_set_vn, file)
+    with open('docs/static/nnet_outputs/nnet_output_v1', 'w') as file:
+        json.dump(
+            data_set_vn,
+            file,
+            separators=(',', ':'),
+            sort_keys=True,
+            indent=4)
+
+    with open('docs/static/nnet_outputs/nnet_output_iter', 'w') as file:
+        json.dump(
+            data_set_vni,
+            file,
+            separators=(',', ':'),
+            sort_keys=True,
+            indent=4)
 
 
 if __name__ == '__main__':
