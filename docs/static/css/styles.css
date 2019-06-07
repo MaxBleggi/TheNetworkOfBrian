@@ -2,6 +2,10 @@ html, body {
     margin: 0 0 0 0;
 }
 
+.indented {
+    text-indent: 2.0em;
+}
+
 /* --- topbar styles --- */
 #topbar {
   background-color: #0d47a1;
@@ -52,4 +56,11 @@ html, body {
                         text-decoration: none;
                     }
 
+/* body container */
+#body-block {
+    margin-top: 80px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
