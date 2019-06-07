@@ -56,7 +56,9 @@ class VanillaNetwork(object):
             "back_prop_delta_times": [],
             "feed_forward_delta_times": [],
             "test_results": [],
-            "test_sizes": test_data_size
+            "test_sizes": test_data_size,
+            "biases": [],
+            "weights": []
         }
 
         epoch_start_time = stopwatch.time()
@@ -87,6 +89,12 @@ class VanillaNetwork(object):
                 print("epoch %i: %s / %s" % (epoch, result, test_data_size))
             else:
                 print("epoch %i finished" % epoch)
+
+        # get the final weights & biases if collecting data
+        if test_data:
+            # 'listify' the vectors so they can be serialized to json
+            analytic_data["weights"] = [v.tolist() for v in self.weights]
+            analytic_data["biases"] = [v.tolist() for v in self.biases]
 
         # only return results if there were any testing done
         # return empty when no test results are desired
