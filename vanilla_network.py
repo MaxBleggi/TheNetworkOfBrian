@@ -6,6 +6,7 @@ with a quadratic cost function, and backpropagation.  This approach also uses a 
 implementation of gradient descent.
 """
 
+import time as stopwatch
 import random as rand
 import numpy as mmath
 from helpers import sigmoid, sigmoid_prime, quadratic_cost
@@ -45,13 +46,21 @@ class VanillaNetwork(object):
         :param test_data: list of 2-tuples (x,y') where
                      x is defined above
                      y' is the digit value of x
-        :return (test_results, test_data_size): 2-tuple of the percentage correct if test data is inputed
+        :return analytic_data: dictionary of the useful data if test data is inputed
         """
-        # use length of data set for progress tracking
+        # use data set for progress tracking
         training_data_size = len(training_data)
-        test_data_size = len(test_data) if test_data else 0
+        test_data_size = len(test_data)
+        analytic_data = {
+            "epoch_delta_times": [],
+            "back_prop_delta_times": [],
+            "feed_forward_delta_times": [],
+            "test_results": [],
+            "test_sizes": test_data_size
+        }
 
-        for epoch in range(0, epochs):
+        epoch_start_time = stopwatch.time()
+        for epoch in range(epochs):
             # randomly shuffle data to vary each batch sampling
             rand.shuffle(training_data)
 
@@ -62,13 +71,26 @@ class VanillaNetwork(object):
 
             for batch in batches:
                 # where all the business goes down
+                backprop_time_start = stopwatch.time()
                 self.update_batch(batch, eta)
+                analytic_data["back_prop_delta_times"].append(stopwatch.time() - backprop_time_start)
 
-            test_results = self.evaluate_accuracy(test_data) if test_data else 0
-            print("epoch %i: %s / %s" % (epoch, test_results, test_data_size))
+            if test_data:
+                # surround in condition because eval is costly, so only need it during testing
+                feedf_time_delta = stopwatch.time()
+                result = self.evaluate_accuracy(test_data)
+
+                analytic_data["test_results"].append(result)
+                analytic_data["feed_forward_delta_times"].append(stopwatch.time() - feedf_time_delta)
+
+                analytic_data["epoch_delta_times"].append(stopwatch.time() - epoch_start_time)
+                print("epoch %i: %s / %s" % (epoch, result, test_data_size))
+            else:
+                print("epoch %i finished" % epoch)
 
         # only return results if there were any testing done
-        return (test_results, test_data_size) if test_data else 0
+        # return empty when no test results are desired
+        return analytic_data if test_data else {}
 
     def update_batch(self, batch, eta):
         """

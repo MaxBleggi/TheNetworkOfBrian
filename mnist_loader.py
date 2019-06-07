@@ -71,5 +71,4 @@ def load_formatted(mnist_path):
     # combine each list of x and y into a single list (x,y)
     validation_load = list(zip(validation_x, val_data[1]))
     test_load = list(zip(test_x, test_data[1]))
-    print(len(training_load))
     return training_load, test_load, validation_load
