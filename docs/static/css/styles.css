@@ -65,22 +65,24 @@ html, body {
     margin-right: auto;
 }
 
-.error-graphs {
-    display: flex;
+.poly-graph {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
 }
-    /* --- graphs --- */
-    .error-graphs #percent-error-graph {
-        width: 100%;
-    }
+
+.plots {
+    width: 100%;
+}
+
+.notes {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
     
     
 @media screen and (max-width: 1020px) {
-    .error-graphs {
-        display: flex;
-        flex-wrap: wrap;
-    }
-        .error-graphs #percent-error-graph {
-            width: 100%;
-        }
+
 }
 

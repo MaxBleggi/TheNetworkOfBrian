@@ -43,8 +43,8 @@ class VanillaNetworkIterative(VanillaNetwork):
             "weights": []
         }
 
-        epoch_start_time = stopwatch.time()
-        for epoch in range(0, epochs):
+        for epoch in range(epochs):
+            epoch_start_time = stopwatch.time()
             # randomly shuffle data to vary each batch sampling
             rand.shuffle(training_data)
 

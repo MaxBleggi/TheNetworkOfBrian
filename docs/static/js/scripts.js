@@ -62,15 +62,23 @@ function loadDataIntoGraphs(dataSets) {
     };
 
     errorOverEpochGraph(
-        "percent-error-graph",
+        "error-vs-epoch",
         iter_nnet["test_results"],
         mat_nnet["test_results"],
         iter_nnet["test_sizes"],
         labels
     );
 
+    labels = {
+        title: "Iterative vs Matrix Based: Epochs over Time",
+        xaxis: "Epochs",
+        yaxis: "Time in Seconds",
+        trace1: "Iterative",
+        trace2: "Matrix-based"
+    };
+
     epochOverTime(
-        "",
+        "epoch-vs-time",
         iter_nnet["epoch_delta_times"],
         mat_nnet["epoch_delta_times"],
         labels
@@ -81,9 +89,71 @@ function epochOverTime(div, timeDeltas1, timeDeltas2, labels) {
     let epochIndex = Array(timeDeltas1.length).fill().map((x, index) => index);
 
     var sum = 0;
-    let timeProgression = timeDeltas1.map(elem => sum = (sum || 0) + elem);
-    console.log(timeProgression);
-    console.log(timeDeltas1);
+    let timeProgression_trc1 = timeDeltas1.map(elem => sum = (sum || 0) + elem);
+    sum = 0;
+    let timeProgression_trc2 = timeDeltas2.map(elem => sum = (sum || 0) + elem);
+
+    var trace1 = {
+        x: epochIndex,
+        y: timeProgression_trc1,
+        name: labels["trace1"],
+        type: 'scatter'
+    };
+
+    var trace2 = {
+        x: epochIndex,
+        y: timeProgression_trc2,
+        name: labels["trace2"],
+        type: 'scatter'
+    };
+
+    var layout = {
+        title: {
+            text: labels["title"],
+            font: {
+              family: 'Courier New, monospace',
+              size: 12
+            },
+            xref: 'paper',
+            x: 0.00,
+          },
+          xaxis: {
+            autotick: false,
+            ticks: 'outside',
+            tick0: 0,
+            dtick: 1.0,
+            ticklen: 8,
+            tickwidth: 4,
+            tickcolor: '#000',
+            title: {
+              text: labels["xaxis"],
+              font: {
+                family: 'Courier New, monospace',
+                size: 14,
+                color: '#7f7f7f'
+              }
+            },
+          },
+          yaxis: {
+            autotick: false,
+            ticks: 'outside',
+            tick0: 0,
+            dtick: 10.0,
+            ticklen: 8,
+            tickwidth: 4,
+            tickcolor: '#000',
+            title: {
+              text: labels["yaxis"],
+              font: {
+                family: 'Courier New, monospace',
+                size: 14,
+                color: '#7f7f7f'
+              }
+            }
+          }
+    };
+
+    Plotly.newPlot(div, [trace1, trace2], layout);
 }
 
 
