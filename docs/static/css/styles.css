@@ -60,7 +60,7 @@ html, body {
 /* body container */
 #body-block {
     margin-top: 80px;
-    width: 80%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -82,7 +82,10 @@ html, body {
 }
     
     
-@media screen and (max-width: 1020px) {
-
+@media (max-width: 600px) {
+        .content .title {
+            margin: 15px 0 12px 20px;
+            font-size: 15px;
+        }
 }
 

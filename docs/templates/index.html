@@ -14,7 +14,7 @@
         </p>
 
         <p>
-            It should also be stated that these networks are not optimized for optimal performance.
+            It should also be stated that these networks are not optimized for performance.
             I made them to experiment with and learn from not for production.
             Alterations can be made to improve their speeds.
             In fact, someone are created purely to compare their speed.
@@ -29,22 +29,22 @@
             can act as a heuristic to understand more complex representations later on.
         </p>
         <p>
-            Think of a simple math function, f(x). That simply takes an input, does some calculations
-            then outputs a value. A neural network works in a similar way in that it can be thought of as
+            Think of a simple math function, f(x). That simply takes an input, does some calculations,
+            and outputs a value. A neural network works in a similar way in that it can be thought of as
             a math formula but instead of a single variable, x, as input, it has thousands of variables.
         </p>
         <p>
-            How a neural network learns can also be thought of in a similar way. Every time the word "learning" is used
+            How a neural network learns can also be thought of in a similar way. Every time the word "learning" is used, it
             essentially just means finding the minimum of this function. We've all done this in high school with calculus.
             In fact, finding the minimum of a function is quite trivial. So why do we need a neural network to calculate
-            these partial derivatives? Well lets look at an example.
+            these partial derivatives? Well let us look at an example.
         </p>
 
         <img class="poly-graph"src="static/img/poly-graph.png">
 
         <p>
             Finding the local (and even global) minima of this graph is easy. You can do it visually by seeing the lowest point.
-            A neural networks graph, however, is magnitudes more complex. This example is in 2 - dimensions and only has one variable.
+            A neural networks graph, however, is magnitudes more complex. This example is in 2-dimensions and only has one variable.
             A realistic graph would be in 3-dimensions or higher! It would also contain thousands of more variables. So calculating
             this, even with multi-variable calculus is practically impossible. Theoretically it is possible to calculate the
             global minimum of any given neural network with gradient descent; however, that is only theoretical. In fact, it
@@ -53,9 +53,9 @@
             <a href="https://medium.com/syncedreview/global-minima-solution-for-neural-networks-22c1fd18616">there has been some interesting research on the subject by MIT and Carnegie Mellon </a>. So the best we can do is find a local minimum, but don't worry,
             because it turns out that all <a href="https://arxiv.org/abs/1412.0233">local minima are approximately equal</a> (not technically a true statement, but for our purposes, it fits well enough). So finding a minimum is usually good enough.
             In fact, you can see it with this network. The local minimum that this network stumbled down, has a peak of approximately
-            95%. That's pretty good! I have, on the other hand, seen different networks process the same data with an accuracy of up
+            95% accuracy. That's pretty good! I have, on the other hand, seen different networks process the same data with an accuracy of up
             to 98% and even 99%. Recognizing a hand written digit is fairly trivial compared to recognizing a face or God knows what
-            else big tech companies have trained their in-house AI to do. That a large reason why everyone wants your data. To train AI.
+            else big tech companies have trained their in-house AI to do. That's a large reason why everyone wants your data. To train AI.
             This simple network alone uses 50,000 images to learn.
         </p>
 
@@ -67,8 +67,8 @@
     </div>
 
 
-    <section class="performance-">
-        <h1 class="def-header">Performance</h1>
+    <section class="performance">
+        <h1 class="body-title">Performance</h1>
         <p class="indented">
             Currently, this page holds two implementations of the same network. The first one is an intuitive, albiet naive,
             implementation of gradient descent. It simply iterates over all the values and calculates the gradient of the curve.
@@ -81,8 +81,8 @@
             When it comes to accuracy, you can clearly see that the difference is non-existant.
             This is because they both perform the operation, just in a different manner. Looking at the plot, you can
             see that the accuracy reaches an asymptotic maximum because we've found the local minimum of the function.
-            There are almost certainly more minimums that are perhaps more optimal, but as stated prior, finding them
-            tant amount to finding the global minimum. So a fools errand.
+            There are almost certainly more minimums that are perhaps more optimal, but as stated prior, finding them is
+            tant amount to finding the global minimum. So a fool's errand.
         </p>
 
 
