@@ -21,6 +21,49 @@
         </p>
     </div>
 
+    <p>
+        Contrary to popular belief, the essence of what makes a neural network function is quite simple in theory.
+        For the purposes of this explanation, I will oversimplify many things, but the intuition derived from this
+        can act as a heuristic to understand more complex representations later on.
+    </p>
+
+    <p>
+        Think of a simple math function, f(x). That simply takes an input, does some calculations
+        then outputs a value. A neural network works in a similar way in that it can be thought of as
+        a math formula but instead of a single variable, x, as input, it has thousands of variables.
+    </p>
+
+    <p>
+        How a neural network learns can also be thought of in a similar way. Every time the word "learning" is used
+        essentially just means finding the minimum of this function. We've all done this in high school with calculus.
+        In fact, finding the minimum of a function is quite trivial. So why do we need a neural network to calculate
+        these partial derivatives? Well lets look at an example
+    </p>
+
+    <div id="min-graph-1"></div>
+
+    <p>
+        Finding the local (and even global) minima of this graph is easy. You can do it visually by seeing the lowest point.
+        A neural networks graph, however, is magnitudes more complex. This example is in 2 - dimensions and only has one variable.
+        A realistic graph would be in 3-dimensions or higher! It would also contain thousands of more variables. So calculating
+        this, even with multi-variable calculus is practically impossible. Theoretically it is possible to calculate the
+        global minimum of any given neural network with gradient descent; however, that is only theoretical. In fact, it
+        is part of a class of problems called NP (non-polynomial deterministic). That is a different subject altogether though.
+        For our purposes, just take for granted that finding the global minimum is practically impossible. In recent years, though,
+        there has been some interesting research on the subject. So the best we can do is find a local minimum, but don't worry,
+        because it turns out that all local minima are approximately equal. So finding a minimum is usually good enough.
+        In fact, you can see it with this network. The local minimum that this network stumbled down, has a peak of approximately
+        95%. That's pretty good! I have, on the other hand, seen different networks process the same data with an accuracy of up
+        to 98% and even 99%. Recognizing a hand written digit is fairly trivial compared to recognizing a face or God knows what
+        else big tech companies have trained their in-house AI to do. That a large reason why everyone wants your data. To train AI.
+        This simple network alone uses 50,000 images to learn.
+    </p>
+
+    <p>
+        So that's the essence of a simple neural network. Now rewind the clock to the 1990's and this would be cutting edge, but
+        more complex models, like deep learning for example, still rely on this concept of a simple neural network.
+    </p>
+
     <div class="performance">
         <h1 class="def-header">Performance</h1>
     </div>
