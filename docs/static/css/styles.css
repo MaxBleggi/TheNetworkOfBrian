@@ -8,12 +8,13 @@ html, body {
 
 /* --- topbar styles --- */
 #topbar {
-  background-color: #0d47a1;
-  height: 50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 4px 4px -4px black;
+    background-color: #0d47a1;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 4px -4px black;
+    z-index: 100;
 }
 
     #topbar .content {
@@ -62,5 +63,24 @@ html, body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.error-graphs {
+    display: flex;
+}
+    /* --- graphs --- */
+    .error-graphs #percent-error-graph {
+        width: 100%;
+    }
+    
+    
+@media screen and (max-width: 1020px) {
+    .error-graphs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+        .error-graphs #percent-error-graph {
+            width: 100%;
+        }
 }
 
